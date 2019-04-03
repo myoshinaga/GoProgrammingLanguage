@@ -5,11 +5,12 @@ import "fmt"
 func removeDup(strings []string) []string {
 	i := 0
 	for _, s := range strings {
-		if strings[i] == s {
+		if s == strings[i] {
 			continue
 		}
 		i++
 		strings[i] = s
+		fmt.Printf("[%d]%s\n", i, strings[i])
 	}
 	return strings[:i+1]
 }
