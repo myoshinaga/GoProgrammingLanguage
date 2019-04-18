@@ -96,7 +96,7 @@ if err := WaitForServer(url); err != nil {
 }
 ```
 
-- ```log.Ftalf``` はデフォルトで日付と時刻がエラーメッセージの先頭につけられる
+- ```log.Fatalf``` はデフォルトで日付と時刻がエラーメッセージの先頭につけられる
 ```
 if err := WaitForServer(url); err != nil {
     log.Fatalf("Site is down: %v\n", err)
