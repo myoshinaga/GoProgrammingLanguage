@@ -40,6 +40,14 @@ func f(i int, j int, k int, s string, t string) {/* ... */}
 
 # 5.3 複数戻り値
 - 多値呼び出しは、複数のパラメータを持つ関数呼び出しの引数として書けるが、製品のコードではめったに使われない
+```
+// func findLinks(url string) ([]string, error)
+links, err := findLinks(url)
+log.Println(links, err)
+
+// 多値呼び出し
+log.Println(findLinks(url))
+```
 - 戻り値にわかりやすい名前をつけるとドキュメント化には役立つ
 - 慣習では最後のboolは成功、errorはエラーを示す
 - 空リターンは名前付き結果の変数のそれぞれを正しい順序で返す省略記法。
